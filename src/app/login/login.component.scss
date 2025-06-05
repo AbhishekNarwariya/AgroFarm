@@ -1,0 +1,89 @@
+.signup-form, .login-form {
+  max-width: 420px;
+  margin: 48px auto;
+  background: #f5f7fa;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+mat-card {
+  padding: 32px 28px 24px 28px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+mat-card-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #1976d2;
+  letter-spacing: 1px;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+mat-form-field {
+  background: #f0f4f8;
+  border-radius: 8px;
+}
+
+mat-label {
+  font-weight: 500;
+  color: #1976d2;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button[mat-raised-button] {
+  min-width: 120px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #1976d2 0%, #42a5f5 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.15);
+  transition: background 0.3s;
+}
+
+button[mat-raised-button]:hover {
+  background: linear-gradient(90deg, #1565c0 0%, #1e88e5 100%);
+}
+
+mat-error {
+  font-size: 0.95em;
+  color: #d32f2f;
+  margin-top: 2px;
+}
+
+.account-link {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 1rem;
+}
+
+.account-link a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 6px;
+  transition: color 0.2s;
+}
+
+.account-link a:hover {
+  color: #1565c0;
+  text-decoration: underline;
+}
