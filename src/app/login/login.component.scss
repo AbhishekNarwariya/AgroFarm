@@ -23,7 +23,7 @@ mat-card-title {
   font-size: 2.2rem;
   margin-bottom: 20px;
   font-weight: 700;
-  color: #1976d2;
+  color: #43a047;
   letter-spacing: 1px;
 }
 
@@ -40,7 +40,7 @@ mat-form-field {
 
 mat-label {
   font-weight: 500;
-  color: #1976d2;
+  color: #43a047;
 }
 
 mat-card-actions {
@@ -53,14 +53,14 @@ button[mat-raised-button] {
   min-width: 120px;
   font-weight: 600;
   letter-spacing: 0.5px;
-  background: linear-gradient(90deg, #1976d2 0%, #42a5f5 100%);
+  background: linear-gradient(90deg, #43a047 0%, #66bb6a 100%);
   color: #fff;
-  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.15);
+  box-shadow: 0 2px 8px rgba(67, 160, 71, 0.15);
   transition: background 0.3s;
 }
 
 button[mat-raised-button]:hover {
-  background: linear-gradient(90deg, #1565c0 0%, #1e88e5 100%);
+  background: linear-gradient(90deg, #388e3c 0%, #43a047 100%);
 }
 
 mat-error {
@@ -76,7 +76,7 @@ mat-error {
 }
 
 .account-link a {
-  color: #1976d2;
+  color: #43a047;
   text-decoration: none;
   font-weight: 600;
   margin-left: 6px;
@@ -84,6 +84,6 @@ mat-error {
 }
 
 .account-link a:hover {
-  color: #1565c0;
+  color: #388e3c;
   text-decoration: underline;
 }

@@ -6,6 +6,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { AuthService, User } from './auth.service';
+import { HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    HttpClientModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
@@ -26,8 +30,10 @@ export class LoginComponent {
   signupForm: FormGroup;
   loginForm: FormGroup;
   showLogin = true;
+  hideSignupPassword = true;
+  hideLoginPassword = true;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.signupForm = this.fb.group({
       username: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
@@ -41,15 +47,44 @@ export class LoginComponent {
 
   onSubmit() {
     if (this.signupForm.valid) {
-      // Handle signup logic here
-      console.log(this.signupForm.value);
+      const user: User = this.signupForm.value;
+      this.authService.signup(user).subscribe({
+        next: (res) => {
+          // Signup successful, go directly to dashboard
+          this.router.navigate(['/dashboard']);
+        },
+        error: (err) => {
+          // Handle error (e.g., show error message)
+          console.error('Signup failed', err);
+        }
+      });
     }
   }
 
   onLogin() {
     if (this.loginForm.valid) {
-      // Handle login logic here
-      console.log(this.loginForm.value);
+      const { email, password } = this.loginForm.value;
+
+      console.log('Attempting login with', email, password);
+      
+
+      this.authService.login(email, password).subscribe({
+        next: (user: User | null) => {
+          if (user) {
+            // Navigate to dashboard on successful login
+            console.log('Login successful', user);
+            
+            this.router.navigate(['/dashboard']);
+          } else {
+            // Handle invalid credentials
+            alert('Invalid email or password');
+          }
+        },
+        error: (err: any) => {
+          console.error('Login failed', err);
+          alert('Login failed');
+        }
+      });
     }
   }
 

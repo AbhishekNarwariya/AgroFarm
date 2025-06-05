@@ -2,3 +2,28 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Green Material theme overrides */
+.mat-primary, .mat-mdc-primary, .mat-raised-button.mat-primary, .mat-flat-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+  background: linear-gradient(90deg, #43a047 0%, #66bb6a 100%) !important;
+  color: #fff !important;
+}
+.mat-mdc-button.mat-primary, .mat-mdc-unelevated-button.mat-primary {
+  color: #43a047 !important;
+}
+.mat-mdc-form-field.mat-primary .mat-mdc-form-field-ripple {
+  background-color: #43a047 !important;
+}
+.mat-mdc-form-field.mat-primary .mat-mdc-floating-label {
+  color: #43a047 !important;
+}
+.mat-mdc-form-field.mat-primary .mat-mdc-form-field-label {
+  color: #43a047 !important;
+}
+.mat-mdc-option.mat-active, .mat-mdc-option.mat-selected {
+  background: #c8e6c9 !important;
+  color: #1b5e20 !important;
+}
+.mat-mdc-progress-bar.mat-primary .mat-mdc-progress-bar-fill::after {
+  background-color: #43a047 !important;
+}
