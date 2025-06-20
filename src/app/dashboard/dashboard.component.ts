@@ -26,9 +26,9 @@ export class DashboardComponent {
 
   constructor(private router: Router) {}
 
-  toggleSidebar() {
-    this.sidebarOpen = !this.sidebarOpen;
-  }
+  // toggleSidebar() {
+  //   this.sidebarOpen = !this.sidebarOpen;
+  // }
 
   prevSlide() {
     this.currentSlide = (this.currentSlide - 1 + this.slideImages.length) % this.slideImages.length;
