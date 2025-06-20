@@ -1,0 +1,27 @@
+<div class="main-layout">
+  <aside class="sidebar" [class.closed]="!sidebarOpen">
+    <div class="sidebar-title">Menu</div>
+    <a routerLink="/dashboard" routerLinkActive="active"><mat-icon>dashboard</mat-icon> Dashboard</a>
+    <a routerLink="/reports" routerLinkActive="active"><mat-icon>bar_chart</mat-icon> Reports</a>
+    <a routerLink="/pics" routerLinkActive="active"><mat-icon>image</mat-icon> Pics</a>
+    <a routerLink="/videos" routerLinkActive="active"><mat-icon>play_circle</mat-icon> Videos</a>
+  </aside>
+  <div class="main-content">
+    <nav class="navbar">
+      <div class="nav-left">
+        <button class="menu-icon" mat-icon-button (click)="toggleSidebar()">
+          <mat-icon>{{ sidebarOpen ? 'menu_open' : 'menu' }}</mat-icon>
+        </button>
+        <img src="assets/ChatGPT Image Jun 19, 2025, 09_31_40 PM.png" alt="Agrofarm Logo" class="logo-img" />
+        <a routerLink="/dashboard" routerLinkActive="active">Home</a>
+        <a routerLink="/products" routerLinkActive="active">Products</a>
+        <a routerLink="/aboutus" routerLinkActive="active">About</a>
+        <a routerLink="/services" routerLinkActive="active">Services</a>
+      </div>
+      <button (click)="logout()" class="logout-icon" mat-icon-button title="Logout">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
+</div>

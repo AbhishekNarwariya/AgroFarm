@@ -1,0 +1,15 @@
+.products-section {
+  width: 100%;
+  max-width: 100vw;
+  text-align: center;
+  background: #fff;
+  padding: 32px 0 48px 0;
+  box-sizing: border-box;
+}
+.products-section h3 {
+  color: #43a047;
+  margin-bottom: 24px;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+/* All product gallery and responsive styles are now in styles.scss */

@@ -71,12 +71,10 @@ export class LoginComponent {
       this.authService.login(email, password).subscribe({
         next: (user: User | null) => {
           if (user) {
-            // Navigate to dashboard on successful login
             console.log('Login successful', user);
             
             this.router.navigate(['/dashboard']);
           } else {
-            // Handle invalid credentials
             alert('Invalid email or password');
           }
         },
